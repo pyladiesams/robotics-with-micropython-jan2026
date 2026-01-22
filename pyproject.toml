@@ -1,10 +1,14 @@
 [project]
-name = "workshoptopic-mmmyyyy"
+name = "micropython-20260127"
 version = "0.1.0"
-description = "Add your description here"
+description = "A hands-on MicroPython introduction for controlling servomotors and sensors with ESP32-S3"
 readme = "README.md"
 requires-python = ">=3.8"
-dependencies = []
+dependencies = [
+    "esptool>=5.0.0",
+    "adafruit-ampy>=1.1.0",
+    "pyserial>=3.5",
+]
 
 [tool.uv]
 dev-dependencies = [
