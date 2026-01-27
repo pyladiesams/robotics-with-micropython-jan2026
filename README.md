@@ -1,6 +1,6 @@
 # ✨ Build your first robot with MicroPython ✨
 
-In this hands-on session, you’ll learn the fundamentals of robotics using MicroPython and an ESP32 microcontroller. 
+In this hands-on session, you’ll learn the fundamentals of robotics using MicroPython and an ESP32 microcontroller.
 We’ll guide you through building a simple robot that can light up LEDs and move a handmade part. The workshop covers wiring, coding, and basic motion control principles, which you can later expand to include sensors or APIs.
 After this tutorial you'll know how to actuate a motor and read sensor data with MicroPython.
 Everything you'll need to build your own robot!
@@ -8,6 +8,7 @@ Everything you'll need to build your own robot!
 ## Prerequisites
 
 ### Hardware
+
 * ESP32-S3-DevKit development board
 * Micro 180° servo motor (SG90 or similar)
 * Jumpers to connect the motor
@@ -16,28 +17,30 @@ Everything you'll need to build your own robot!
 ### Software
 
 * PyLadies Amsterdam uses [uv](https://docs.astral.sh/uv/) for dependency management
-* Python 3.8+
+* Python 3.10+
 * On Windows: USB access must be enabled, some enterprise-managed devices may have restrictions
 
 ## Setup
 
 0. *Only remote participants:
-   Flash MicroPython to your ESP32 dev board: Follow the steps* [*here*
-   ](https://micropython.org/download/ESP32_GENERIC_S3/)
-
+   Flash MicroPython to your ESP32 dev board:*
+   1. *Follow the steps* *[here
+      ](https://micropython.org/download/ESP32_GENERIC_S3/)Make sure to use the [.bin firmware file](https://micropython.org/resources/firmware/ESP32_GENERIC_S3-20251209-v1.27.0.bin)*
 1. Clone repository and install dependencies
    Run the following code:
+
 ```bash
   git clone git@github.com:pyladiesams/robotics-with-micropython-jan2026.git
   cd robotics-with-micropython-jan2026
 
   # create and activate venv, install dependencies
   uv sync
-  ```
+  source .venv/bin/activate
+```
 
 2. Connect the ESP to your laptop and find out at which serial port it is connected:
 
-  ```bash
+```bash
   # macOS
   ls /dev/cu.* | grep usb
 
@@ -46,7 +49,7 @@ Everything you'll need to build your own robot!
 
   # Windows
   # Check Device Manager for COM ports
-  ```
+```
 
 ## Workshop Steps
 
@@ -115,7 +118,7 @@ After uploading press the reset button on the devboard.
 
 Now the color of your LED should change once you touch the PIN.
 
-As a next step make the motor move to the 20° to the left when you touch the pin once and to the right when touching twice. 
+As a next step make the motor move to the 20° to the left when you touch the pin once and to the right when touching twice.
 
 ## Uploading Code
 
@@ -131,15 +134,16 @@ Or use ampy directly:
 ampy --port /dev/cu.usbserial-0001 put step1_led_blink/main.py /main.py
 ```
 
-
-
 ## Video record
+
 Re-watch [this YouTube stream](https://www.youtube.com/live/6u5wlQamD9E)
 
 ## Credits
+
 This workshop was set up by @pyladiesams and @jquack
 
 ## Appendix
+
 ### Resources
 
 - [ESP32-S3-DevKitC-1 Datasheet](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.1.html)
@@ -147,10 +151,9 @@ This workshop was set up by @pyladiesams and @jquack
 - [MG90S Servo Motor Datasheet](https://www.electronicoscaldas.com/datasheet/MG90S_Tower-Pro.pdf)
 - [ESP32-S3 esptool Documentation](https://docs.espressif.com/projects/esptool/en/latest/esp32s3/)
 - [MicroPython ESP32-S3 Docs](https://docs.micropython.org/en/latest/esp32/quickref.html)
+
 ### Pre-Commit Hooks
 
 To ensure our code looks beautiful, PyLadies uses pre-commit hooks. You can enable them by running `pre-commit install`. You may have to install `pre-commit` first, using `uv sync`, `uv pip install pre-commit` or `pip install pre-commit`.
-
-
 
 Happy Coding :)

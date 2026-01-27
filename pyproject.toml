@@ -3,7 +3,7 @@ name = "micropython-20260127"
 version = "0.1.0"
 description = "A hands-on MicroPython introduction for controlling servomotors and sensors with ESP32-S3"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 dependencies = [
     "esptool>=5.0.0",
     "adafruit-ampy>=1.1.0",
