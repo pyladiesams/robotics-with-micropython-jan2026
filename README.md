@@ -33,6 +33,7 @@ Everything you'll need to build your own robot!
 
   # create and activate venv, install dependencies
   uv sync
+  source .venv/bin/activate
   ```
 
 2. Connect the ESP to your laptop and find out at which serial port it is connected:
