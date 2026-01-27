@@ -17,7 +17,7 @@ Everything you'll need to build your own robot!
 ### Software
 
 * PyLadies Amsterdam uses [uv](https://docs.astral.sh/uv/) for dependency management
-* Python 3.8+
+* Python 3.10+
 * On Windows: USB access must be enabled, some enterprise-managed devices may have restrictions
 
 ## Setup
