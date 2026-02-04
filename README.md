@@ -9,25 +9,25 @@ Everything you'll need to build your own robot!
 
 ### Hardware
 
-* ESP32-S3-DevKit development board
-* Micro 180° servo motor (SG90 or similar)
-* Jumpers to connect the motor
-* USB data cable for programming
+- ESP32-S3-DevKit development board
+- Micro 180° servo motor (SG90 or similar)
+- Jumpers to connect the motor
+- USB data cable for programming
 
 ### Software
 
-* PyLadies Amsterdam uses [uv](https://docs.astral.sh/uv/) for dependency management
-* Python 3.10+
-* On Windows: USB access must be enabled, some enterprise-managed devices may have restrictions
+- PyLadies Amsterdam uses [uv](https://docs.astral.sh/uv/) for dependency management
+- Python 3.10+
+- On Windows: USB access must be enabled, some enterprise-managed devices may have restrictions
 
 ## Setup
 
-0. *Only remote participants:
-   Flash MicroPython to your ESP32 dev board:*
-   1. *Follow the steps* *[here
-      ](https://micropython.org/download/ESP32_GENERIC_S3/)Make sure to use the [.bin firmware file](https://micropython.org/resources/firmware/ESP32_GENERIC_S3-20251209-v1.27.0.bin)*
-1. Clone repository and install dependencies
-   Run the following code:
+1. *Only remote participants:
+  Flash MicroPython to your ESP32 dev board:*
+  1. *Follow the steps* *[here
+    ]([https://micropython.org/download/ESP32_GENERIC_S3/)Make](https://micropython.org/download/ESP32_GENERIC_S3/)Make) sure to use the [.bin firmware file](https://micropython.org/resources/firmware/ESP32_GENERIC_S3-20251209-v1.27.0.bin)*
+2. Clone repository and install dependencies
+  Run the following code:
 
 ```bash
   git clone git@github.com:pyladiesams/robotics-with-micropython-jan2026.git
@@ -38,18 +38,27 @@ Everything you'll need to build your own robot!
   source .venv/bin/activate
 ```
 
-2. Connect the ESP to your laptop and find out at which serial port it is connected:
+1. Connect the ESP to your laptop and find out at which serial port it is connected:
 
 ```bash
   # macOS
   ls /dev/cu.* | grep usb
 
   # Linux
-  ls /dev/ttyUSB*
+
+  ls /dev/tty*
+  # If there are many devices, 
+  # check once without the board plugged in, 
+  # and then again one time when it's plugged in
+  # Under ubuntu you might need to set some additional permissions
 
   # Windows
-  # Check Device Manager for COM ports
+  Check the 'Device Manager' for COM ports
+  # The port you are looking for will look like "COM4"
+  # write down the number of the COM port
 ```
+
+
 
 ## Workshop Steps
 
@@ -85,7 +94,7 @@ For 360° continuous rotation servos, the pulse width controls speed and directi
   - Red wire → 3.3V (Power Supply)
   - Yellow/Orange wire → GPIO 15 (Signal Pin)
 
-<img src="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/_images/ESP32-S3_DevKitC-1_pinlayout_v1.1.jpg" width="50%">
+
 
 `step2_motor_move/main.py`
 
