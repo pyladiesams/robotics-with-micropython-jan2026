@@ -1,5 +1,7 @@
 # ✨ Build your first robot with MicroPython ✨
 
+### Presentation: [{Robotics Mini Course in Micropython @ Monumental}](workshop-slides.pdf)
+
 In this hands-on session, you’ll learn the fundamentals of robotics using MicroPython and an ESP32 microcontroller.
 We’ll guide you through building a simple robot that can light up LEDs and move a handmade part. The workshop covers wiring, coding, and basic motion control principles, which you can later expand to include sensors or APIs.
 After this tutorial you'll know how to actuate a motor and read sensor data with MicroPython.
@@ -45,10 +47,15 @@ Everything you'll need to build your own robot!
   ls /dev/cu.* | grep usb
 
   # Linux
-  ls /dev/ttyUSB*
+  ls /dev/tty*
+  # If many devices show up, run the command twice
+  # once with the ESP connected and once without
+  # afterwards you might need to set additional permissions to upload
 
   # Windows
-  # Check Device Manager for COM ports
+  # Check "Device Manager" for COM ports
+  # the port you are 
+
 ```
 
 ## Workshop Steps
